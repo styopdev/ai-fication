@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Similar Picture Search</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .preview { max-width: 200px; margin: 10px; }
+  </style>
+</head>
+<body>
+<h2>Upload 3 Images</h2>
+  <div class="container">
+    <div class="block">
+      <input type="file" id="img1" accept="image/*" onchange="showPreview(this, 'preview1')"><br>
+      <img id="preview1" class="preview">
+    </div>
+    <div class="block">
+      <input type="file" id="img2" accept="image/*" onchange="showPreview(this, 'preview2')"><br>
+      <img id="preview2" class="preview">
+    </div>
+    <div class="block">
+      <input type="file" id="img3" accept="image/*" onchange="showPreview(this, 'preview3')"><br>
+      <img id="preview3" class="preview">
+    </div>
+  </div>
+  <br>
+  <button onclick="compareImages()">Find Similar</button>
+
+  <h3>Result:</h3>
+  <div id="result"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
