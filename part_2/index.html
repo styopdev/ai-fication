@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Natural Language Search (TensorFlow.js + USE)</title>
+  <!-- Link external CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Natural Language Search</h1>
+  <div class="container">
+    <div class="panel">
+      <div class="label">Search</div>
+      <div class="search-box">
+        <input id="searchInput" type="text" placeholder="Type a natural query, e.g. 'vegan café near the beach open late'" />
+        <button id="searchBtn" disabled>Search</button>
+      </div>
+      <div class="status" id="status">Loading model…</div>
+    </div>
+
+    <div class="panel">
+      <div class="label">Items</div>
+      <div id="items"></div>
+    </div>
+
+    <div class="panel">
+      <div class="label">Results</div>
+      <div id="results"></div>
+    </div>
+  </div>
+
+  <!-- TensorFlow.js and Universal Sentence Encoder -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.13.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/universal-sentence-encoder@1.3.3/dist/universal-sentence-encoder.min.js"></script>
+  <!-- Link external JS -->
+  <script src="script.js"></script>
+</body>
+</html>
